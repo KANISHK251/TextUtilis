@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT US PAGE</title>
+</head>
+<body>
+    <style>
+
+        img{
+            float: right;
+            margin: 25px;
+            padding: 5px;
+            width: 23vw;
+            height: 55vh;
+        
+        }
+        .container{
+            font-size: 19px;
+            margin: 20px;
+            padding: 10px;
+
+        }
+    </style>
+
+
+ 
+        <p><img src= "{% static 'CSS/kanishk.jpg' %}"></p>
+   
+
+    <div class="container">
+        <h1>About Me</h1>
+        <br>
+     <p> Hello everyone! My name is Kanishk, and I am a 2023 B.Tech graduate in Information Technology from Amity University. I am currently working as a TechOps Engineer at Zopper.</p>
+     <p>This is my first website built with Django. It serves as an introduction to Django, where I've learned about URLs, templates, views, and how to redirect from one endpoint to another using urls.py. I also learned how to create functions in views.py to render templates. The website includes a feature where users can input text, and it will remove punctuation, capitalize letters, eliminate extra spaces and lines, and count the number of characters in the text.</p>
+
+    </div>
+
+    
+
+
+    
+</body>
+</html>

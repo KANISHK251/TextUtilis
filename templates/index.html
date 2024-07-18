@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>TextUtilis</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">TextUtils</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus">About Us</a>
+            </li>
+      
+          </ul>
+        </div>
+      </nav>
+      
+
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Welcome to TextUtils!</strong> You can do anything with your text here!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="container">
+      <form action='analyze' method='POST'>  {% csrf_token %}
+      
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Enter your text here and let Text Utils do the magic</label>
+          <textarea class="form-control" name='text' id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="removepunc" class="custom-control-input" id="customSwitch1">
+        <label class="custom-control-label" for="customSwitch1">Remove Punctuations</label>
+      </div>
+      
+        <div class="custom-control custom-switch">
+        <input type="checkbox" name="capitalize" class="custom-control-input" id="customSwitch2">
+        <label class="custom-control-label" for="customSwitch2">UPPERCASE</label>
+      </div>
+      
+        <div class="custom-control custom-switch">
+        <input type="checkbox"  name="newlineremove" class="custom-control-input" id="customSwitch3">
+        <label class="custom-control-label" for="customSwitch3">New Line Remover</label>
+      </div>
+      
+        <div class="custom-control custom-switch">
+        <input type="checkbox"  name="extraspaceremove" class="custom-control-input" id="customSwitch4">
+        <label class="custom-control-label" for="customSwitch4">Extra Spaces Remover</label>
+      </div>
+
+      <div class="custom-control custom-switch">
+        <input type="checkbox"  name="charcount" class="custom-control-input" id="customSwitch5">
+        <label class="custom-control-label" for="customSwitch5">Count Characters</label>
+      </div>
+         
+      <button type="submit" class="btn btn-dark mt-2">Analyze Text</button>
+        </form>
+      </div>
+      <br>
+      <br>
+
+
+</body>
+</html>
+
+
+
+
+
+
