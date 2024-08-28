@@ -26,11 +26,6 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('aboutus', views.aboutus, name="aboutus"),
     path('analyze',views.analyze,name="analyze"),
-    path('capitalize',views.capitalize, name="capital"),
-    path('removepunc',views.removepunc, name="removepunc"),
-    path('newlineremove',views.newlineremove, name="newlineremove"),
-    path('spaceremove',views.spaceremove, name="spaceremove"),
-    path('charcount',views.charcount, name="charcount"),
 ]
 
 if settings.DEBUG:

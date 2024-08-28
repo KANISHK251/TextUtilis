@@ -26,7 +26,7 @@ def analyze(request):
     capital = request.POST.get('capitalize','off')
     extraspaceremove = request.POST.get('extraspaceremove','off')
     newlineremove = request.POST.get('newlineremove','off')
-    charcount = request.POST .get('charcount','off')
+    charcount = request.POST.get('charcount','off')
 
     operations = []
 
@@ -78,25 +78,3 @@ def analyze(request):
     
     params = {'oper' : operations}
     return render(request,'analyze.html',params)
- 
-    
-
-
-
-def removepunc(request):
-    djtext = request.GET.get('text','default')
-    print(djtext)
-    return HttpResponse('''It will remove the punctuation <br><a href = "/">Back Button''')
-
-def capitalize(request):
-    return HttpResponse('''It will capital the letter <br><a href = "/">Back Button''')
-
-def newlineremove(request):
-    return HttpResponse('''It will remove the newline <br><a href = "/">Back Button''')
-
-def spaceremove(request):
-    return HttpResponse('''It will remove the space <br><a href = "/">Back Button''')
-
-def charcount(request):
-    return HttpResponse('''It will count the characters <br><a href = "/">Back Button''')
-
